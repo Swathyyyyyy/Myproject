@@ -5,9 +5,7 @@ from time import sleep
 
 username = input('Enter your username: ')
 password = input('Enter your password: ')
-
 driver = webdriver.Chrome("chromedriver")
-
 driver.get(" https://www.saucedemo.com/")
 uname = driver.find_element("id", "user-name") 
 uname.send_keys(username)
@@ -26,11 +24,10 @@ else:
     print("[+] Login successful")
 driver.maximize_window()
 sleep(5)
+#Adding items to cart
 driver.find_element("name","add-to-cart-sauce-labs-backpack").click()
 driver.find_element("name","add-to-cart-sauce-labs-bike-light").click()
 driver.find_element("name","add-to-cart-sauce-labs-bolt-t-shirt").click()
-
-
 error_message = "Incorrect username or password."
 errors = driver.find_elements(By.CLASS_NAME, "flash-error")
 
