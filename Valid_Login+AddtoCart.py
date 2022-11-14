@@ -2,7 +2,6 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from time import sleep
-import sys
 
 username = input('Enter your username: ')
 password = input('Enter your password: ')
